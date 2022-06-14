@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homePage">
+
+<!--    <fragment-->
+<!--        android:id="@+id/welcomePage"-->
+<!--        android:name="com.example.moodtracker.WelcomePage"-->
+<!--        android:label="WelcomePage"-->
+<!--        tools:layout="@layout/fragment_welcome_page">-->
+<!--        <action-->
+<!--            android:id="@+id/action_welcomePage_to_loginPage"-->
+<!--            app:destination="@id/loginPage" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/loginPage"-->
+<!--        android:name="com.example.moodtracker.LoginPage"-->
+<!--        android:label="LoginPage"-->
+<!--        tools:layout="@layout/fragment_login_page">-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginPage_to_homePage"-->
+<!--            app:destination="@id/homePage" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginPage_to_forget_pwd"-->
+<!--            app:destination="@id/forget_pwd" />-->
+<!--    </fragment>-->
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.moodtracker.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_report"
+            app:destination="@id/report" />
+        <action
+            android:id="@+id/action_homePage_to_setting"
+            app:destination="@id/setting" />
+        <action
+            android:id="@+id/action_homePage_to_others_mood"
+            app:destination="@id/others_mood" />
+        <action
+            android:id="@+id/action_homePage_to_mood_select"
+            app:destination="@id/mood_select" />
+    </fragment>
+    <fragment
+        android:id="@+id/mood_select"
+        android:name="com.example.moodtracker.Mood_select"
+        android:label="fragment_mood_select"
+        tools:layout="@layout/fragment_mood_select" >
+        <action
+            android:id="@+id/action_mood_select_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_mood_select_to_text_mood"
+            app:destination="@id/text_mood" />
+        <action
+            android:id="@+id/action_mood_select_to_report"
+            app:destination="@id/report" />
+        <action
+            android:id="@+id/action_mood_select_to_others_mood"
+            app:destination="@id/others_mood" />
+        <action
+            android:id="@+id/action_mood_select_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/others_mood"
+        android:name="com.example.moodtracker.Others_mood"
+        android:label="fragment_others_mood"
+        tools:layout="@layout/fragment_others_mood" >
+        <action
+            android:id="@+id/action_others_mood_to_setting"
+            app:destination="@id/setting" />
+        <action
+            android:id="@+id/action_others_mood_to_report"
+            app:destination="@id/report" />
+        <action
+            android:id="@+id/action_others_mood_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.moodtracker.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting_to_theme_change"
+            app:destination="@id/theme_change" />
+        <action
+            android:id="@+id/action_setting_to_report"
+            app:destination="@id/report" />
+        <action
+            android:id="@+id/action_setting_to_others_mood"
+            app:destination="@id/others_mood" />
+        <action
+            android:id="@+id/action_setting_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/text_mood"
+        android:name="com.example.moodtracker.Text_mood"
+        android:label="fragment_text_mood"
+        tools:layout="@layout/fragment_text_mood" >
+        <action
+            android:id="@+id/action_text_mood_to_others_mood"
+            app:destination="@id/others_mood" />
+        <action
+            android:id="@+id/action_text_mood_to_mood_select"
+            app:destination="@id/mood_select" />
+    </fragment>
+    <fragment
+        android:id="@+id/report"
+        android:name="com.example.moodtracker.Report"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_report_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_report_to_setting"
+            app:destination="@id/setting" />
+        <action
+            android:id="@+id/action_report_to_others_mood"
+            app:destination="@id/others_mood" />
+    </fragment>
+    <fragment
+        android:id="@+id/theme_change"
+        android:name="com.example.moodtracker.Theme_change"
+        android:label="fragment_theme_change"
+        tools:layout="@layout/fragment_theme_change" >
+        <action
+            android:id="@+id/action_theme_change_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+</navigation>
